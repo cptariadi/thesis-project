@@ -1,0 +1,491 @@
+fileFormatVersion: 2
+guid: 0d29c2feab48bb544a384eea0bd44110
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: life_heartcracked_0
+    21300002: life_heartcracked_1
+    21300004: life_heartcracked_2
+    21300006: life_heartcracked_3
+    21300008: life_heartcracked_4
+    21300010: life_heartcracked_5
+    21300012: life_heartcracked_6
+    21300014: life_heartcracked_7
+    21300016: life_heartcracked_8
+    21300018: life_heartcracked_9
+    21300020: life_heartcracked_10
+    21300022: life_heartcracked_11
+    21300024: life_heartcracked_12
+    21300026: life_heartcracked_13
+    21300028: life_heartcracked_14
+    21300030: life_heartcracked_15
+    21300032: life_heartcracked_16
+    21300034: life_heartcracked_17
+    21300036: life_heartcracked_18
+    21300038: life_heartcracked_19
+    21300040: life_heartcracked_20
+    21300042: life_heartcracked_21
+    21300044: life_heartcracked_22
+    21300046: life_heartcracked_23
+    21300048: life_heartcracked_24
+    21300050: life_heartcracked_25
+    21300052: life_heartcracked_26
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: life_heartcracked_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 6486
+        width: 1932
+        height: 1676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_1
+      rect:
+        serializedVersion: 2
+        x: 2014
+        y: 6486
+        width: 1938
+        height: 1676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_2
+      rect:
+        serializedVersion: 2
+        x: 4007
+        y: 6486
+        width: 1931
+        height: 1676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_3
+      rect:
+        serializedVersion: 2
+        x: 5999
+        y: 6480
+        width: 1937
+        height: 1682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 4491
+        width: 1939
+        height: 1685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_5
+      rect:
+        serializedVersion: 2
+        x: 3179
+        y: 6102
+        width: 88
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_6
+      rect:
+        serializedVersion: 2
+        x: 3299
+        y: 6118
+        width: 58
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_7
+      rect:
+        serializedVersion: 2
+        x: 3389
+        y: 6086
+        width: 85
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_8
+      rect:
+        serializedVersion: 2
+        x: 3134
+        y: 6086
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_9
+      rect:
+        serializedVersion: 2
+        x: 3162
+        y: 6099
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_10
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 6074
+        width: 88
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_11
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 4426
+        width: 2097
+        height: 1673
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_12
+      rect:
+        serializedVersion: 2
+        x: 5954
+        y: 6074
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_13
+      rect:
+        serializedVersion: 2
+        x: 6095
+        y: 6080
+        width: 55
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_14
+      rect:
+        serializedVersion: 2
+        x: 6182
+        y: 6046
+        width: 84
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_15
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 4368
+        width: 2166
+        height: 1699
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_16
+      rect:
+        serializedVersion: 2
+        x: 5823
+        y: 6011
+        width: 100
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_17
+      rect:
+        serializedVersion: 2
+        x: 5926
+        y: 6062
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_18
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 6019
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_19
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 5863
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_20
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 3386
+        width: 45
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_21
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 3398
+        width: 90
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_22
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 3398
+        width: 56
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1670
+        width: 2246
+        height: 1721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_24
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 3303
+        width: 152
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_25
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 3354
+        width: 83
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: life_heartcracked_26
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 3326
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

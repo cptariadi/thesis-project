@@ -1,0 +1,5 @@
+Game Configuration
+
+Master Volume = 1
+BGM Volume = 1
+SE Volume = 1
