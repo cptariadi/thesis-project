@@ -14,6 +14,7 @@ public class PlatformAutoMove : MonoBehaviour {
 	public bool verticalMove;
 	public bool useTrigger;
 	public bool triggerOn;
+	public bool isWall;
 
 	private GameObject playerObj;
 	private bool playerOnPlatform;
@@ -91,7 +92,7 @@ public class PlatformAutoMove : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D coll){
 	
-		if (coll.gameObject.name == playerObj.name && playerObj.transform.position.y > (gameObject.transform.position.y))
+		if (coll.gameObject.name == playerObj.name && playerObj.transform.position.y > (gameObject.transform.position.y) && isWall == false)
 		{
 		
 			Debug.Log ("kokodayo");
