@@ -15,8 +15,13 @@ public class PlayerControl : MonoBehaviour {
 	private Vector3 laddering;
 	private Rigidbody2D rb;
 	private BoxCollider2D boxcollider;
+	private float landMovement;
+
+	public bool pauseMode;
+	public GameObject menuPause;
 
 	private bool jumpPressed;
+	private bool tempJumpTrigger;
 
 	private Animator playerAnimator;
 	[SerializeField] private LayerMask lmLand;
@@ -27,7 +32,8 @@ public class PlayerControl : MonoBehaviour {
 	[SerializeField] private GameObject mainCamera;
 
 	void Start(){
-
+		
+		tempJumpTrigger = false;
 		jumpPressed = false;
 		isJump = false;
 		playerAnimator = gameObject.GetComponent<Animator> ();
@@ -59,6 +65,40 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 
+	void Update(){
+	
+		if (gameObject.GetComponent<PlayerStatus> ().isLose == false) {
+
+			if (Input.GetKeyDown (KeyCode.Escape) && pauseMode == false) {
+
+				pauseMode = true;
+				menuPause.SetActive (true);
+
+			} else if (Input.GetKeyDown (KeyCode.Escape) && pauseMode == true) {
+
+				pauseMode = false;
+				menuPause.SetActive (false);
+
+			}
+
+
+
+			if (pauseMode == false) {
+
+				if (Input.GetKeyDown (KeyCode.W) && isGrounded ()) {
+		
+					tempJumpTrigger = true;
+				}
+
+				landMovement = Input.GetAxis ("Horizontal");
+
+			}
+
+		}
+
+	}
+
+
 
 
 	void FixedUpdate(){
@@ -71,7 +111,7 @@ public class PlayerControl : MonoBehaviour {
 
 			LadderingAction ();
 
-			float landMovement = Input.GetAxis ("Horizontal");
+
 
 			Vector3 movement = new Vector3 (landMovement, 0);
 
@@ -84,8 +124,9 @@ public class PlayerControl : MonoBehaviour {
 
 			playerAnimator.SetFloat ("Speed", Mathf.Abs (landMovement));
 
-			if(Input.GetKeyDown (KeyCode.W) && jumpPressed == false && isJump == false){
+			if(tempJumpTrigger == true/*Input.GetKeyDown (KeyCode.W) */&& jumpPressed == false && isJump == false){
 
+				tempJumpTrigger = false;
 				playerTempPos = transform.position;
 				jumpPressed = true;
 
@@ -116,6 +157,12 @@ public class PlayerControl : MonoBehaviour {
 			isJump = false;
 			jumpPressed = false;
 			playerAnimator.SetBool ("isJumping", false);
+		}
+
+		if (onEvent == true) {
+		
+			playerAnimator.SetBool ("isJumping", false);
+			playerAnimator.SetFloat ("Speed", 0f);
 		}
 
 
@@ -182,6 +229,23 @@ public class PlayerControl : MonoBehaviour {
 
 		}
 
+
+
+	}
+
+
+
+	public void PauseMenu(){
+	
+		if (pauseMode == true) {
+		
+			pauseMode = false;
+			menuPause.SetActive (false);
+		} else if (pauseMode == false) {
+
+			pauseMode = true;
+			menuPause.SetActive (true);
+		}
 
 
 	}

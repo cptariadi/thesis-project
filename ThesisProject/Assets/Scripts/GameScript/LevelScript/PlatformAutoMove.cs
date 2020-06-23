@@ -33,53 +33,60 @@ public class PlatformAutoMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		objCurrPos = new Vector2(gameObject.GetComponent<Transform> ().position.x, gameObject.GetComponent<Transform> ().position.y);
+		if (playerObj.GetComponent<PlayerControl> ().pauseMode == false) {
 
-		if (useTrigger == false) {
+
+			objCurrPos = new Vector2 (gameObject.GetComponent<Transform> ().position.x, gameObject.GetComponent<Transform> ().position.y);
+
+			if (useTrigger == false) {
 		
-			triggerOn = true;
-		}
+				triggerOn = true;
+			}
 
-		if (triggerOn == true) {
+			if (triggerOn == true) {
 
-			if (verticalMove == false) {
+				if (verticalMove == false) {
 
-				if (objCurrPos.x >= (objOriPos.x + borderRangeRight)) {
+					if (objCurrPos.x >= (objOriPos.x + borderRangeRight)) {
 		
-					speed = speed * -1;
+						speed = speed * -1;
 
-				} else if (objCurrPos.x <= (objOriPos.x - borderRangeLeft)) {
+					} else if (objCurrPos.x <= (objOriPos.x - borderRangeLeft)) {
 		
-					speed = speed * -1;
-				}
+						speed = speed * -1;
+					}
 	
 
-				transform.Translate (new Vector3 (2, 0, 0) * speed * Time.deltaTime);
+					transform.Translate (new Vector3 (2, 0, 0) * speed * Time.deltaTime);
 
-				if (playerOnPlatform == true) {
-					playerObj.transform.Translate (new Vector3 (2, 0, 0) * speed * Time.deltaTime);
+					if (playerOnPlatform == true) {
+						playerObj.transform.Translate (new Vector3 (2, 0, 0) * speed * Time.deltaTime);
+					}
+
+
+				} else if (verticalMove == true) {
+
+					if (objCurrPos.y >= (objOriPos.y + borderRangeRight)) {
+
+						speed = speed * -1;
+
+					} else if (objCurrPos.y <= (objOriPos.y - borderRangeLeft)) {
+
+						speed = speed * -1;
+					}
+
+
+					transform.Translate (new Vector3 (0, 2, 0) * speed * Time.deltaTime);
+					if (playerOnPlatform == true) {
+						playerObj.transform.Translate (new Vector3 (0, 2, 0) * speed * Time.deltaTime);
+					}
+
 				}
-
-
-			} else if (verticalMove == true) {
-
-				if (objCurrPos.y >= (objOriPos.y + borderRangeRight)) {
-
-					speed = speed * -1;
-
-				} else if (objCurrPos.y <= (objOriPos.y - borderRangeLeft)) {
-
-					speed = speed * -1;
-				}
-
-
-				transform.Translate (new Vector3 (0, 2, 0) * speed * Time.deltaTime);
-				if (playerOnPlatform == true) {
-					playerObj.transform.Translate (new Vector3 (0, 2, 0) * speed * Time.deltaTime);
-				}
-
 			}
+
 		}
+
+
 	}
 
 	void OnCollisionStay2D(Collision2D coll){

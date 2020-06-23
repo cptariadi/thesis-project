@@ -22,36 +22,43 @@ public class ButtonHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown(KeyCode.F) && target.tag == "platformMoving" && onColl) {
+		if (playerObj.GetComponent<PlayerControl> ().pauseMode == false) {
 
-			target.GetComponent<PlatformAutoMove> ().TurnTrigger ();
+			if (Input.GetKeyDown (KeyCode.F) && target.tag == "platformMoving" && onColl) {
+
+				target.GetComponent<PlatformAutoMove> ().TurnTrigger ();
+
+			}
+
+
+			if (target.GetComponent<PlatformAutoMove> ().triggerOn == false) {
+
+				indicator.GetComponent<SpriteRenderer> ().color = Color.red;
+			} else if (target.GetComponent<PlatformAutoMove> ().triggerOn == true) {
+
+				indicator.GetComponent<SpriteRenderer> ().color = Color.green;
+			}
+
 
 		}
-
-
-		if (target.GetComponent<PlatformAutoMove> ().triggerOn == false) {
-
-			indicator.GetComponent<SpriteRenderer> ().color = Color.red;
-		} else if (target.GetComponent<PlatformAutoMove> ().triggerOn == true) {
-
-			indicator.GetComponent<SpriteRenderer> ().color = Color.green;
-		}
-
 
 
 	}
 
 	void OnTriggerEnter2D(Collider2D coll){
 	
-		Debug.Log ("test");
-		onColl = true;
-	
+		if (coll.gameObject.name == playerObj.name) {
+			Debug.Log ("test");
+			onColl = true;
+		}
+
 	}
 
 	void OnTriggerExit2D(Collider2D coll){
 
-
-		onColl = false;
+		if (coll.gameObject.name == playerObj.name) {
+			onColl = false;
+		}
 
 	}
 

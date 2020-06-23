@@ -12,9 +12,10 @@ public class GameSaverLoader : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		
 		playerProgression = playerProgressionObj.GetComponent<PlayerProgressionHandler> ();
 		savefilepath = Application.dataPath + "/PlayerData.yourdata";
+		playerProgression.currentLevel = 1;
 		LoadData ();
 	}
 

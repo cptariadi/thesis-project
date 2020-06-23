@@ -5,31 +5,40 @@ using UnityEngine;
 public class PlayerProgressionHandler : MonoBehaviour {
 
 	public int currentLevel;
+	public bool onMainMenu;
 	private int levelPointer;
+
+
 
 	void Update(){
 
-		levelPointer = 1;
+		if (onMainMenu == true) {
 
-		do {
-
-
-
-			if(GameObject.Find ("Level" + levelPointer).GetComponent<LevelSelectHandler>().levelCode <= currentLevel){
-
-				GameObject.Find ("Level" + levelPointer).GetComponent<LevelSelectHandler>().isLevelLocked = false;
-
-			}else{
-
-				GameObject.Find ("Level" + levelPointer).GetComponent<LevelSelectHandler>().isLevelLocked = true;
-			}
-
-			levelPointer++;
+			levelPointer = 1;
 
 
-		} while (GameObject.Find ("Level" + levelPointer) != null);
+
+			do {
 
 
+
+				if (GameObject.Find ("Level" + levelPointer).GetComponent<LevelSelectHandler> ().levelCode <= currentLevel) {
+
+					GameObject.Find ("Level" + levelPointer).GetComponent<LevelSelectHandler> ().isLevelLocked = false;
+
+				} else {
+
+					GameObject.Find ("Level" + levelPointer).GetComponent<LevelSelectHandler> ().isLevelLocked = true;
+				}
+
+				levelPointer++;
+
+
+			} while (GameObject.Find ("Level" + levelPointer) != null);
+
+
+
+		}
 
 	}
 

@@ -31,24 +31,35 @@ public class EventManager : MonoBehaviour {
 		if (isRunning == true) {
 		
 
-			textDialogue [currEvent - 1].SetActive (true);
-
-
-			if (Input.GetKeyDown (KeyCode.Return)) {
-			
-				textDialogue [currEvent - 1].SetActive (false);
-				currEvent++;
-			}
-
-			if (currEvent > textDialogue.Count) {
+			if (textDialogue [0] == null) {
 			
 				isRunning = false;
 				playerControlScript.onEvent = false;
 				gameObject.SetActive (false);
+
 			}
 
+			if (textDialogue [0] != null) {
+
+				textDialogue [currEvent - 1].SetActive (true);
 
 
+				if (Input.GetKeyDown (KeyCode.Return)) {
+			
+					textDialogue [currEvent - 1].SetActive (false);
+					currEvent++;
+				}
+
+				if (currEvent > textDialogue.Count) {
+			
+					isRunning = false;
+					playerControlScript.onEvent = false;
+					gameObject.SetActive (false);
+				}
+
+
+
+			}
 		}
 
 
@@ -58,7 +69,7 @@ public class EventManager : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll){
 	
 		if (coll == playerObjColl) {
-		
+			
 			isRunning = true;
 			currEvent = 1;
 		}

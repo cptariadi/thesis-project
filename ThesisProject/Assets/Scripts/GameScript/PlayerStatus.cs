@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour {
 
@@ -9,6 +10,8 @@ public class PlayerStatus : MonoBehaviour {
 	public GameObject[] healthObj;
 	private bool immunity;
 	public Animator[] healthObjAnimator;
+	public GameObject GameOverScreen;
+	public bool isLose;
 
 
 
@@ -16,6 +19,7 @@ public class PlayerStatus : MonoBehaviour {
 	void Start () {
 		
 		immunity = false;
+		isLose = false;
 
 
 	}
@@ -24,6 +28,12 @@ public class PlayerStatus : MonoBehaviour {
 	void Update () {
 
 		HealthUpdate ();
+
+		if (health <= 0 && isLose == false) {
+		
+			isLose = true;
+			GameOverScreen.SetActive (true);
+		}
 
 	}
 
@@ -87,6 +97,15 @@ public class PlayerStatus : MonoBehaviour {
 		immunity = false;
 
 
+	}
+
+
+
+	public void RetryLevel(){
+	
+		if (isLose == true) {
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		}
 	}
 
 
