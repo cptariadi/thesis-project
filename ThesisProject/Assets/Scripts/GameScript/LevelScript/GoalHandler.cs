@@ -52,7 +52,7 @@ public class GoalHandler : MonoBehaviour {
 
 	public void NextLevel(){
 		
-		SceneManager.LoadScene ("Level" + thisLevel);
+		SceneManager.LoadScene ("Level" + (thisLevel+1));
 
 	}
 

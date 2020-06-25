@@ -9,6 +9,8 @@ public class DoorKeyHandler : MonoBehaviour {
 	private bool isUnlocked;
 	private bool playerExist;
 	public GameObject playerObj;
+	public Sprite sprite_Locked;
+	public Sprite sprite_Unlocked;
 	int keyCount;
 
 	// Use this for initialization
@@ -25,12 +27,10 @@ public class DoorKeyHandler : MonoBehaviour {
 		
 			isUnlocked = true;
 		
-		}
-
-		if (isUnlocked == true && playerExist == true && Input.GetKeyDown(KeyCode.F)) {
+		}/*else if (isUnlocked == true && playerExist == true && Input.GetKeyDown(KeyCode.F)) {
 		
 			isUnlocked = false;
-		}
+		}*/
 
 		DoorOpen ();
 
@@ -60,17 +60,19 @@ public class DoorKeyHandler : MonoBehaviour {
 	
 		if (isUnlocked == true) {
 		
+			gameObject.GetComponent<SpriteRenderer> ().sprite = sprite_Unlocked;
 			for (int j = 0; j < Doors.Count; j++) {
 			
-				Doors [j].SetActive (true);
+				Doors [j].SetActive (false);
 
 			}
 
 		} else if (isUnlocked == false) {
 		
+			gameObject.GetComponent<SpriteRenderer> ().sprite = sprite_Locked;
 			for (int j = 0; j < Doors.Count; j++) {
 
-				Doors [j].SetActive (false);
+				Doors [j].SetActive (true);
 
 			}
 		}

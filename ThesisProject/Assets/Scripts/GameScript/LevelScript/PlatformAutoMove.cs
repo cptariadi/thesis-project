@@ -32,7 +32,7 @@ public class PlatformAutoMove : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
 		if (playerObj.GetComponent<PlayerControl> ().pauseMode == false) {
 

@@ -54,13 +54,25 @@ public class GameSaverLoader : MonoBehaviour {
 
 
 		} else {
-		
+			SaveData ();
 			Debug.Log ("no savefile found");
 		}
 
 
 
 	}
+
+
+
+	public void ResetProgression(){
+	
+		playerProgression.currentLevel = 1;
+		SaveData ();
+
+
+	}
+
+
 
 
 
