@@ -36,6 +36,13 @@ public class PlatformAutoMove : MonoBehaviour {
 
 		if (playerObj.GetComponent<PlayerControl> ().pauseMode == false) {
 
+			if (triggerOn == true) {
+			
+				gameObject.GetComponent<SpriteRenderer> ().color = new Color32 (0, 158, 21, 255);
+			} else if (triggerOn == false) {
+			
+				gameObject.GetComponent<SpriteRenderer> ().color = new Color32 (0, 255, 33, 255);
+			}
 
 			objCurrPos = new Vector2 (gameObject.GetComponent<Transform> ().position.x, gameObject.GetComponent<Transform> ().position.y);
 
