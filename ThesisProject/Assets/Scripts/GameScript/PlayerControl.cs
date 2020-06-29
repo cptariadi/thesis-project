@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
 
+	private bool isRunning;
 	private bool onLadder;
 	private bool isJump;
 	public bool onEvent;
@@ -16,6 +17,8 @@ public class PlayerControl : MonoBehaviour {
 	private Rigidbody2D rb;
 	private BoxCollider2D boxcollider;
 	private float landMovement;
+
+	private float tempspeed;
 
 	public bool pauseMode;
 	public GameObject menuPause;
@@ -48,6 +51,10 @@ public class PlayerControl : MonoBehaviour {
 		targetScale = transform.localScale;
 
 		cameraScale = mainCamera.transform.localScale;
+
+		isRunning = false;
+
+		tempspeed = speed;
 
 	}
 
@@ -147,7 +154,7 @@ public class PlayerControl : MonoBehaviour {
 		
 			}
 
-
+			Run ();
 			rb.AddForce (movement * speed);
 
 		}
@@ -247,6 +254,31 @@ public class PlayerControl : MonoBehaviour {
 			menuPause.SetActive (true);
 		}
 
+
+	}
+
+
+
+	private void Run(){
+	
+
+
+
+		if (Input.GetKey (KeyCode.LeftShift)) {
+		
+			isRunning = true;
+		} else {
+		
+			isRunning = false;
+		}
+
+		if (isRunning == true && speed <= (tempspeed * 2f)) {
+		
+			speed = tempspeed * 2;
+		} else if (isRunning == false && speed != tempspeed) {
+		
+			speed = tempspeed;
+		}
 
 	}
 

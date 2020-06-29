@@ -28,7 +28,7 @@ public class GoalHandler : MonoBehaviour {
 			if (playerObj.GetComponent<PlayerProgressionHandler> ().currentLevel == thisLevel) {
 
 				playerObj.GetComponent<PlayerProgressionHandler> ().currentLevel = thisLevel + 1;
-				//gameObject.GetComponent<GameSaverLoader> ().SaveData ();
+				gameObject.GetComponent<GameSaverLoader> ().SaveData ();
 
 			}
 

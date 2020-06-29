@@ -12,6 +12,7 @@ public class PlayerStatus : MonoBehaviour {
 	public Animator[] healthObjAnimator;
 	public GameObject GameOverScreen;
 	public bool isLose;
+	public GameObject[] Stars;
 
 
 
@@ -35,6 +36,9 @@ public class PlayerStatus : MonoBehaviour {
 			GameOverScreen.SetActive (true);
 		}
 
+
+
+
 	}
 
 
@@ -45,9 +49,14 @@ public class PlayerStatus : MonoBehaviour {
 			//healthObj [0].GetComponent<Image> ().color = Color.green;
 			healthObjAnimator [0].SetBool ("Damaged", false);
 			//healthObj [1].GetComponent<Image> ().color = Color.green;
-			healthObjAnimator [0].SetBool ("Damaged", false);
+			healthObjAnimator [1].SetBool ("Damaged", false);
 			//healthObj [2].GetComponent<Image> ().color = Color.green;
-			healthObjAnimator [0].SetBool ("Damaged", false);
+			healthObjAnimator [2].SetBool ("Damaged", false);
+
+			Stars [0].GetComponent<Image> ().color = Color.white;
+			Stars [1].GetComponent<Image> ().color = Color.white;
+			Stars [2].GetComponent<Image> ().color = Color.white;
+
 		} else {
 
 
@@ -55,6 +64,7 @@ public class PlayerStatus : MonoBehaviour {
 					
 				//healthObj [i].GetComponent<Image> ().color = Color.green;
 				healthObjAnimator [i].SetBool ("Damaged", false);
+
 			}
 			
 
@@ -66,6 +76,22 @@ public class PlayerStatus : MonoBehaviour {
 
 
 		}
+
+		if (health == 2) {
+		
+			Stars [0].GetComponent<Image> ().color = Color.white;
+			Stars [1].GetComponent<Image> ().color = Color.white;
+			Stars [2].GetComponent<Image> ().color = Color.black;
+		
+		} else if (health == 1) {
+		
+			Stars [0].GetComponent<Image> ().color = Color.white;
+			Stars [1].GetComponent<Image> ().color = Color.black;
+			Stars [2].GetComponent<Image> ().color = Color.black;
+		}
+
+
+
 
 
 	}
